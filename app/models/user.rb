@@ -11,6 +11,16 @@ class User < ActiveRecord::Base
   acts_as_follower
   acts_as_followable
 
+  acts_as_messageable
+
+  def mailboxer_name
+    self.name
+  end
+
+  def mailboxer_email(object)
+    self.email
+  end
+
   has_many :posts
   has_many :comments
   has_many :events
