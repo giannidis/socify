@@ -7,10 +7,10 @@
     <%= fa_icon 'shield' %>
     <%= pluralize(@user.posts_count, 'post') %>
   </h5>
-  <% if @user.dob.present? %>
+  <% if @user.ages.present? %>
     <h5>
       <%= fa_icon @user.sex %>
-      <%= "#{pluralize(age(@user.dob), 'year')} old" %>
+      <%= "#{pluralize(age(@user.ages), 'year')} old" %>
     </h5>
   <% end %>
 
