@@ -21,9 +21,9 @@ class User < ActiveRecord::Base
     self.email
   end
 
-  has_many :posts
-  has_many :comments
-  has_many :events
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy 
+  has_many :events, dependent: :destroy 
 
   mount_uploader :avatar, AvatarUploader
   mount_uploader :cover, AvatarUploader
