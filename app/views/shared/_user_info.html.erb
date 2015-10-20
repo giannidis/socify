@@ -17,7 +17,8 @@
   <% if @user.url.present? %>
       <h5>
         <%= fa_icon 'steam-square' %>
-        <%= @user.url %>
+        <%= link_to "steam profile", @user.url, :target => '_blank' %>
+
       </h5>
   <% end %>
 
