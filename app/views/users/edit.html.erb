@@ -31,10 +31,18 @@
           <%= f.text_field :location, placeholder: 'Location', class: 'form-control' %>
         </div>
 
+      <% if @user.sex == "male" %>
         <div class="form-group">
           <%= f.label :steam_profile %>
           <%= f.text_field :url, placeholder: 'Steam profile', class: 'form-control' %>
         </div>
+      <% else %>
+        <div class="form-group">
+          <%= f.label :heartit_profile %>
+          <%= f.text_field :url, placeholder: 'Heartit profile', class: 'form-control' %>
+        </div>
+      <% end %>
+
         <div class="form-group">
           <%= f.label :phone_number %>
           <%= f.text_field :phone_number, placeholder: 'Phone Number', class: 'form-control' %>
