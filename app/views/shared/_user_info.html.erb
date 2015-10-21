@@ -16,9 +16,15 @@
 
   <% if @user.url.present? %>
       <h5>
+
+      <% if @user.sex == "male" %>
         <%= fa_icon 'steam-square' %>
         <%= link_to "steam profile", @user.url, :target => '_blank' %>
+      <% else %>
+        <%= fa_icon 'heart' %>
+        <%= link_to "heartit profile", @user.url, :target => '_blank' %>
 
+      <% end %>
       </h5>
   <% end %>
 
