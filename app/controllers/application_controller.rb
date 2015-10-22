@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
 
   helper_method :mailbox, :conversation
 
+  def after_sign_in_path_for(resource)
+    find_friends_path
+  end
+
   private
 
   def mailbox
